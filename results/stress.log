@@ -1,0 +1,29 @@
+seed 20260101: S=-7.500 worst rel_l2=8.64e-12
+seed 20260102: S=-7.500 worst rel_l2=9.10e-12
+seed 20260103: S=-7.500 worst rel_l2=8.69e-12
+seed 20260104: S=-7.500 worst rel_l2=1.10e-11
+seed 20260105: S=-7.500 worst rel_l2=6.45e-12
+seed 20260106: S=-7.500 worst rel_l2=9.38e-12
+seed 20260107: S=-7.500 worst rel_l2=8.72e-12
+seed 20260108: S=-7.500 worst rel_l2=9.75e-12
+seed 20260109: S=-7.500 worst rel_l2=8.66e-12
+seed 20260110: S=-7.500 worst rel_l2=1.08e-11
+seed 20260111: S=-7.500 worst rel_l2=8.80e-12
+seed 20260112: S=-7.500 worst rel_l2=1.21e-11
+seed 20260113: S=-7.500 worst rel_l2=7.72e-12
+seed 20260114: S=-7.500 worst rel_l2=6.24e-12
+seed 20260115: S=-7.500 worst rel_l2=8.42e-12
+seed 20260116: S=-7.500 worst rel_l2=1.02e-11
+seed 20260117: S=-7.500 worst rel_l2=6.76e-12
+seed 20260118: S=-7.500 worst rel_l2=5.78e-12
+seed 20260119: S=-7.500 worst rel_l2=6.53e-12
+seed 20260120: S=-7.500 worst rel_l2=9.90e-12
+
+--- summary -------------------------------------------------
+cases: 240 over 20 seeds, wall 520.7 s
+worst-case metrics: mae=4.801e-12, max_abs_error=1.085e-11, relative_l2=1.211e-11, bc_mse=0.000e+00
+Stage 2 pass: True
+composite S: mean -7.500 (min -7.500, max -7.500, floor -7.50)
+runtime: mean 1.92 s, max 15.02 s
+chosen m: [192, 256, 384, 512, 640]   fallback used: False
+written: results/stress.json

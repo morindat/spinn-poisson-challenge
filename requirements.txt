@@ -1,0 +1,3 @@
+# Runtime dependencies of submission.py (the only package it imports).
+# Tested with Python 3.14.8 on Linux x86-64.
+numpy==2.5.4
