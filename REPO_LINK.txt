@@ -1,0 +1,51 @@
+SPINN Poisson Challenge — submission bundle
+==========================================
+
+GitHub repository : https://github.com/morindat/spinn-poisson-challenge
+Branch            : main
+Author            : Papaa Dennis Morindat
+Course            : CS-3410 / MAT-3211-1, Introduction to Machine Learning, Monsoon 2026
+Challenge         : Optional advanced challenge — beat the SPINN Poisson benchmark
+
+
+What is in this ZIP
+-------------------
+submission.py        solve_problem(case) -> (N, N) array.  The only file the evaluator
+                     imports.  Self-contained apart from numpy.
+requirements.txt     pinned runtime dependency (numpy==2.5.4)
+README.md            method, exact reproduction commands, hardware, expected runtime
+results_note.pdf     the 3-page results note: public metrics with five-run statistics,
+                     a convergence/stability check, runtime, limitations and citations
+REPO_LINK.txt        this file (also records the GitHub URL)
+
+benchmark/           unmodified copy of the public evaluator and case generator
+experiments/         scripts that produced every number and figure in the note
+results/             JSON/CSV outputs and figures referenced by the note
+report/              LaTeX source of the results note
+Makefile             convenience targets: test, robustness, stress, convergence,
+                     figures, note, zip
+
+
+Trained weights
+---------------
+None.  The method is a deterministic numerical solver (Chebyshev–Gauss–Lobatto
+spectral collocation with a tensor-product direct solve), so there is nothing to
+train, load or ship.  Every answer is computed from the case inputs at call time.
+
+
+Expected behaviour on the official harness
+------------------------------------------
+Stage 1 (reference case, 129 x 129, five runs):
+    MAE 2.93e-13   max|err| 7.95e-13   rel L2 6.88e-13   BC MSE 0
+    all four targets passed by 8-9 orders of magnitude
+Hidden-like suites (240 cases, 20 self-chosen seeds):
+    worst rel L2 1.21e-11, BC MSE 0, Stage-3 composite S = -7.50 (the floor)
+Runtime: 0.13 s for the reference case; ~1.5 s mean and 6.2 s worst per case,
+against a 20-minute-per-case CPU budget.
+
+
+Quick check
+-----------
+    pip install -r requirements.txt
+    python benchmark/evaluate.py --submission submission.py --repeats 5
+    python benchmark/evaluate.py --submission submission.py --suite hidden --hidden-seed 424242

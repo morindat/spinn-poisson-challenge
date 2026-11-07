@@ -1,5 +1,8 @@
 # Beating the SPINN Poisson benchmark with a Chebyshev spectral solver
 
+**Repository:** <https://github.com/morindat/spinn-poisson-challenge> — `main`
+branch, same content as this bundle (see `REPO_LINK.txt`).
+
 Optional advanced challenge for **CS-3410 / MAT-3211-1, Introduction to Machine
 Learning, Monsoon 2026** (Ashoka University).
 
